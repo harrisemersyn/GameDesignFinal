@@ -7,6 +7,10 @@ The only (almost) useable asset aesthetic-wise is the SpotlightObject.uasset. Th
 
 When importing assets, the following needs to be changed: edit > project settings > engine > navigation mesh > runtime generation > dynamic
 
+Another important setting that needs to be changed is going into edit > project settings > physics > surface materials and changing the first surface material to be named "Player" and the second to be named "Object". **This MUST be done in order for ray tracing to work properly and for imports to function!**
+
+In regards to the physical materials files, the player is already set to have the proper surface material. However, whenever you create an asset, and place it in game, you **must** give it the material that is named "ObjectPhysicalMaterial.uasset" in the settings of the actor. If it is not given this material, raytracing won't work with it, and it won't function as an obstacle the player can hide behind.
+
 Current Files
 --------------
 
